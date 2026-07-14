@@ -1,0 +1,875 @@
+{
+  "restaurants": [
+    {
+      "id": "rest-001",
+      "name": "Bombay Spice House",
+      "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop",
+      "cuisine": ["Indian", "North Indian", "Mughlai"],
+      "rating": 4.5,
+      "reviewCount": 1240,
+      "deliveryTime": "25-35",
+      "deliveryFee": 30,
+      "priceRange": 2,
+      "promoted": true,
+      "isOpen": true,
+      "address": "MG Road, Bengaluru",
+      "description": "Authentic North Indian cuisine with rich, aromatic spices and traditional cooking methods passed down through generations.",
+      "menu": [
+        {
+          "id": "item-001",
+          "name": "Butter Chicken",
+          "description": "Tender chicken in a rich, creamy tomato-based gravy with aromatic spices",
+          "price": 320,
+          "image": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400&h=300&fit=crop",
+          "rating": 4.7,
+          "category": "Main Course",
+          "isVeg": false,
+          "isBestseller": true
+        },
+        {
+          "id": "item-002",
+          "name": "Paneer Tikka Masala",
+          "description": "Chargrilled cottage cheese cubes in a spiced onion-tomato gravy",
+          "price": 280,
+          "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400&h=300&fit=crop",
+          "rating": 4.5,
+          "category": "Main Course",
+          "isVeg": true,
+          "isBestseller": true
+        },
+        {
+          "id": "item-003",
+          "name": "Dal Makhani",
+          "description": "Slow-cooked black lentils in butter and cream, simmered overnight for rich flavor",
+          "price": 220,
+          "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&h=300&fit=crop",
+          "rating": 4.6,
+          "category": "Main Course",
+          "isVeg": true,
+          "isBestseller": false
+        },
+        {
+          "id": "item-004",
+          "name": "Chicken Biryani",
+          "description": "Fragrant basmati rice layered with spiced chicken, cooked in dum style",
+          "price": 350,
+          "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400&h=300&fit=crop",
+          "rating": 4.8,
+          "category": "Biryani",
+          "isVeg": false,
+          "isBestseller": true
+        },
+        {
+          "id": "item-005",
+          "name": "Garlic Naan",
+          "description": "Soft, fluffy bread topped with garlic and fresh coriander, baked in tandoor",
+          "price": 60,
+          "image": "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=400&h=300&fit=crop",
+          "rating": 4.3,
+          "category": "Breads",
+          "isVeg": true,
+          "isBestseller": false
+        },
+        {
+          "id": "item-006",
+          "name": "Gulab Jamun",
+          "description": "Deep-fried milk solids soaked in rose-cardamom scented sugar syrup",
+          "price": 120,
+          "image": "https://images.unsplash.com/photo-1666190077584-30a9502c7fac?w=400&h=300&fit=crop",
+          "rating": 4.4,
+          "category": "Desserts",
+          "isVeg": true,
+          "isBestseller": false
+        }
+      ]
+    },
+    {
+      "id": "rest-002",
+      "name": "Tokyo Ramen Bar",
+      "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&h=400&fit=crop",
+      "cuisine": ["Japanese", "Ramen", "Asian"],
+      "rating": 4.7,
+      "reviewCount": 890,
+      "deliveryTime": "30-40",
+      "deliveryFee": 40,
+      "priceRange": 3,
+      "promoted": false,
+      "isOpen": true,
+      "address": "Koramangala, Bengaluru",
+      "description": "Authentic Japanese ramen and comfort food, crafted with imported ingredients and traditional techniques.",
+      "menu": [
+        {
+          "id": "item-007",
+          "name": "Tonkotsu Ramen",
+          "description": "Rich pork bone broth ramen with chashu pork, soft-boiled egg, and nori",
+          "price": 450,
+          "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&h=300&fit=crop",
+          "rating": 4.9,
+          "category": "Ramen",
+          "isVeg": false,
+          "isBestseller": true
+        },
+        {
+          "id": "item-008",
+          "name": "Spicy Miso Ramen",
+          "description": "Fermented miso-based broth with chili oil, ground pork, and bean sprouts",
+          "price": 420,
+          "image": "https://images.unsplash.com/photo-1591814468924-caf88d1232e1?w=400&h=300&fit=crop",
+          "rating": 4.6,
+          "category": "Ramen",
+          "isVeg": false,
+          "isBestseller": false
+        },
+        {
+          "id": "item-009",
+          "name": "Gyoza (6 pcs)",
+          "description": "Pan-fried Japanese dumplings filled with pork and vegetables",
+          "price": 280,
+          "image": "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=400&h=300&fit=crop",
+          "rating": 4.5,
+          "category": "Starters",
+          "isVeg": false,
+          "isBestseller": true
+        },
+        {
+          "id": "item-010",
+          "name": "Edamame",
+          "description": "Steamed young soybeans lightly salted, served warm",
+          "price": 180,
+          "image": "https://images.unsplash.com/photo-1564834744159-ff0ea41ba4b9?w=400&h=300&fit=crop",
+          "rating": 4.2,
+          "category": "Starters",
+          "isVeg": true,
+          "isBestseller": false
+        },
+        {
+          "id": "item-011",
+          "name": "Chicken Katsu Curry",
+          "description": "Crispy breaded chicken cutlet with Japanese curry sauce and steamed rice",
+          "price": 380,
+          "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=400&h=300&fit=crop",
+          "rating": 4.4,
+          "category": "Main Course",
+          "isVeg": false,
+          "isBestseller": false
+        },
+        {
+          "id": "item-012",
+          "name": "Matcha Ice Cream",
+          "description": "Premium Japanese green tea ice cream with mochi bites",
+          "price": 220,
+          "image": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&h=300&fit=crop",
+          "rating": 4.3,
+          "category": "Desserts",
+          "isVeg": true,
+          "isBestseller": false
+        }
+      ]
+    },
+    {
+      "id": "rest-003",
+      "name": "Napoli Pizza Co.",
+      "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=600&h=400&fit=crop",
+      "cuisine": ["Italian", "Pizza", "Pasta"],
+      "rating": 4.3,
+      "reviewCount": 2100,
+      "deliveryTime": "20-30",
+      "deliveryFee": 25,
+      "priceRange": 2,
+      "promoted": true,
+      "isOpen": true,
+      "address": "Indiranagar, Bengaluru",
+      "description": "Wood-fired Neapolitan pizzas and handmade pasta, using imported Italian ingredients for an authentic experience.",
+      "menu": [
+        {
+          "id": "item-013",
+          "name": "Margherita Pizza",
+          "description": "San Marzano tomatoes, fresh mozzarella, basil on wood-fired sourdough crust",
+          "price": 350,
+          "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&h=300&fit=crop",
+          "rating": 4.6,
+          "category": "Pizza",
+          "isVeg": true,
+          "isBestseller": true
+        },
+        {
+          "id": "item-014",
+          "name": "Pepperoni Pizza",
+          "description": "Spicy pepperoni, mozzarella, and oregano on thin crust",
+          "price": 420,
+          "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?w=400&h=300&fit=crop",
+          "rating": 4.5,
+          "category": "Pizza",
+          "isVeg": false,
+          "isBestseller": true
+        },
+        {
+          "id": "item-015",
+          "name": "Penne Arrabbiata",
+          "description": "Penne pasta in a fiery tomato sauce with garlic and red chilli",
+          "price": 280,
+          "image": "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=400&h=300&fit=crop",
+          "rating": 4.2,
+          "category": "Pasta",
+          "isVeg": true,
+          "isBestseller": false
+        },
+        {
+          "id": "item-016",
+          "name": "Truffle Mushroom Pasta",
+          "description": "Fettuccine with wild mushrooms, truffle oil, and parmesan cream sauce",
+          "price": 480,
+          "image": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=400&h=300&fit=crop",
+          "rating": 4.7,
+          "category": "Pasta",
+          "isVeg": true,
+          "isBestseller": true
+        },
+        {
+          "id": "item-017",
+          "name": "Garlic Bread (4 pcs)",
+          "description": "Crispy baguette slices with garlic butter and herbs, served with marinara dip",
+          "price": 160,
+          "image": "https://images.unsplash.com/photo-1619535860434-ba1d8fa12536?w=400&h=300&fit=crop",
+          "rating": 4.1,
+          "category": "Starters",
+          "isVeg": true,
+          "isBestseller": false
+        },
+        {
+          "id": "item-018",
+          "name": "Tiramisu",
+          "description": "Classic Italian dessert with espresso-soaked ladyfingers and mascarpone cream",
+          "price": 280,
+          "image": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=400&h=300&fit=crop",
+          "rating": 4.5,
+          "category": "Desserts",
+          "isVeg": true,
+          "isBestseller": false
+        }
+      ]
+    },
+    {
+      "id": "rest-004",
+      "name": "Dragon Wok",
+      "image": "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=600&h=400&fit=crop",
+      "cuisine": ["Chinese", "Asian", "Thai"],
+      "rating": 4.1,
+      "reviewCount": 760,
+      "deliveryTime": "25-35",
+      "deliveryFee": 30,
+      "priceRange": 2,
+      "promoted": false,
+      "isOpen": true,
+      "address": "HSR Layout, Bengaluru",
+      "description": "Flame-kissed wok specialties blending Chinese and Thai flavors with bold spices and fresh ingredients.",
+      "menu": [
+        {
+          "id": "item-019",
+          "name": "Kung Pao Chicken",
+          "description": "Diced chicken stir-fried with peanuts, dried chillies, and Sichuan pepper",
+          "price": 320,
+          "image": "https://images.unsplash.com/photo-1525755662778-989d0524087e?w=400&h=300&fit=crop",
+          "rating": 4.3,
+          "category": "Main Course",
+          "isVeg": false,
+          "isBestseller": true
+        },
+        {
+          "id": "item-020",
+          "name": "Vegetable Hakka Noodles",
+          "description": "Stir-fried noodles with bell peppers, carrots, cabbage, and soy sauce",
+          "price": 220,
+          "image": "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=400&h=300&fit=crop",
+          "rating": 4.0,
+          "category": "Noodles",
+          "isVeg": true,
+          "isBestseller": false
+        },
+        {
+          "id": "item-021",
+          "name": "Dim Sum Basket (8 pcs)",
+          "description": "Assorted steamed dumplings with shrimp, pork, and vegetables",
+          "price": 360,
+          "image": "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=400&h=300&fit=crop",
+          "rating": 4.5,
+          "category": "Starters",
+          "isVeg": false,
+          "isBestseller": true
+        },
+        {
+          "id": "item-022",
+          "name": "Manchurian Dry",
+          "description": "Crispy vegetable balls tossed in a tangy, spicy Manchurian sauce",
+          "price": 240,
+          "image": "https://images.unsplash.com/photo-1645696301019-35adcc18fc01?w=400&h=300&fit=crop",
+          "rating": 4.2,
+          "category": "Starters",
+          "isVeg": true,
+          "isBestseller": false
+        },
+        {
+          "id": "item-023",
+          "name": "Thai Green Curry",
+          "description": "Aromatic green curry with coconut milk, vegetables, and Thai basil",
+          "price": 340,
+          "image": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=400&h=300&fit=crop",
+          "rating": 4.4,
+          "category": "Main Course",
+          "isVeg": true,
+          "isBestseller": false
+        }
+      ]
+    },
+    {
+      "id": "rest-005",
+      "name": "The Burger Barn",
+      "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=600&h=400&fit=crop",
+      "cuisine": ["American", "Burgers", "Fast Food"],
+      "rating": 4.4,
+      "reviewCount": 1850,
+      "deliveryTime": "15-25",
+      "deliveryFee": 20,
+      "priceRange": 2,
+      "promoted": true,
+      "isOpen": true,
+      "address": "Whitefield, Bengaluru",
+      "description": "Gourmet handcrafted burgers with premium patties, artisan buns, and house-made sauces.",
+      "menu": [
+        {
+          "id": "item-024",
+          "name": "Classic Smash Burger",
+          "description": "Double smashed beef patties with American cheese, pickles, and special sauce",
+          "price": 280,
+          "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=300&fit=crop",
+          "rating": 4.6,
+          "category": "Burgers",
+          "isVeg": false,
+          "isBestseller": true
+        },
+        {
+          "id": "item-025",
+          "name": "BBQ Bacon Burger",
+          "description": "Grilled beef patty with crispy bacon, cheddar, onion rings, and BBQ sauce",
+          "price": 350,
+          "image": "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=400&h=300&fit=crop",
+          "rating": 4.5,
+          "category": "Burgers",
+          "isVeg": false,
+          "isBestseller": true
+        },
+        {
+          "id": "item-026",
+          "name": "Loaded Fries",
+          "description": "Crispy fries topped with melted cheese, jalapeños, and sour cream",
+          "price": 200,
+          "image": "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=400&h=300&fit=crop",
+          "rating": 4.3,
+          "category": "Sides",
+          "isVeg": true,
+          "isBestseller": false
+        },
+        {
+          "id": "item-027",
+          "name": "Veggie Supreme Burger",
+          "description": "Crispy paneer patty with lettuce, tomato, cheese, and chipotle mayo",
+          "price": 250,
+          "image": "https://images.unsplash.com/photo-1550547660-d9450f859349?w=400&h=300&fit=crop",
+          "rating": 4.2,
+          "category": "Burgers",
+          "isVeg": true,
+          "isBestseller": false
+        },
+        {
+          "id": "item-028",
+          "name": "Chocolate Milkshake",
+          "description": "Thick, creamy chocolate milkshake with whipped cream and chocolate drizzle",
+          "price": 180,
+          "image": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop",
+          "rating": 4.4,
+          "category": "Beverages",
+          "isVeg": true,
+          "isBestseller": false
+        }
+      ]
+    },
+    {
+      "id": "rest-006",
+      "name": "Coastal Kitchen",
+      "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=400&fit=crop",
+      "cuisine": ["South Indian", "Seafood", "Kerala"],
+      "rating": 4.6,
+      "reviewCount": 670,
+      "deliveryTime": "30-45",
+      "deliveryFee": 35,
+      "priceRange": 3,
+      "promoted": false,
+      "isOpen": true,
+      "address": "JP Nagar, Bengaluru",
+      "description": "Fresh coastal flavors from Kerala and Karnataka, featuring sustainably sourced seafood and traditional spice blends.",
+      "menu": [
+        {
+          "id": "item-029",
+          "name": "Kerala Fish Curry",
+          "description": "Fresh fish simmered in a tangy coconut and tamarind gravy with curry leaves",
+          "price": 380,
+          "image": "https://images.unsplash.com/photo-1626776876729-bab4369a5a5a?w=400&h=300&fit=crop",
+          "rating": 4.8,
+          "category": "Main Course",
+          "isVeg": false,
+          "isBestseller": true
+        },
+        {
+          "id": "item-030",
+          "name": "Masala Dosa",
+          "description": "Crispy rice and lentil crepe filled with spiced potato, served with chutneys and sambar",
+          "price": 150,
+          "image": "https://images.unsplash.com/photo-1668236543090-82eb5eada77a?w=400&h=300&fit=crop",
+          "rating": 4.5,
+          "category": "South Indian",
+          "isVeg": true,
+          "isBestseller": true
+        },
+        {
+          "id": "item-031",
+          "name": "Prawn Ghee Roast",
+          "description": "Succulent prawns tossed in Mangalorean spice paste with ghee",
+          "price": 420,
+          "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&h=300&fit=crop",
+          "rating": 4.7,
+          "category": "Starters",
+          "isVeg": false,
+          "isBestseller": true
+        },
+        {
+          "id": "item-032",
+          "name": "Appam with Stew",
+          "description": "Lacy rice hoppers with a fragrant coconut vegetable stew",
+          "price": 200,
+          "image": "https://images.unsplash.com/photo-1630383249896-424e482df921?w=400&h=300&fit=crop",
+          "rating": 4.3,
+          "category": "South Indian",
+          "isVeg": true,
+          "isBestseller": false
+        },
+        {
+          "id": "item-033",
+          "name": "Payasam",
+          "description": "Traditional Kerala milk dessert with vermicelli, cardamom, and cashews",
+          "price": 140,
+          "image": "https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400&h=300&fit=crop",
+          "rating": 4.2,
+          "category": "Desserts",
+          "isVeg": true,
+          "isBestseller": false
+        }
+      ]
+    },
+    {
+      "id": "rest-007",
+      "name": "Taco Loco",
+      "image": "https://images.unsplash.com/photo-1653748844218-a6978cc57b9e?w=600&h=400&fit=crop",
+      "cuisine": ["Mexican", "Tex-Mex", "Latin"],
+      "rating": 4.2,
+      "reviewCount": 540,
+      "deliveryTime": "20-30",
+      "deliveryFee": 25,
+      "priceRange": 2,
+      "promoted": false,
+      "isOpen": true,
+      "address": "Electronic City, Bengaluru",
+      "description": "Bold Mexican flavors with handmade tortillas, slow-cooked meats, and fiery salsas.",
+      "menu": [
+        {
+          "id": "item-034",
+          "name": "Loaded Beef Tacos (3 pcs)",
+          "description": "Corn tortillas with seasoned beef, pico de gallo, guacamole, and sour cream",
+          "price": 320,
+          "image": "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=400&h=300&fit=crop",
+          "rating": 4.5,
+          "category": "Tacos",
+          "isVeg": false,
+          "isBestseller": true
+        },
+        {
+          "id": "item-035",
+          "name": "Chicken Burrito Bowl",
+          "description": "Rice bowl with grilled chicken, black beans, corn, salsa, and cheese",
+          "price": 350,
+          "image": "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=400&h=300&fit=crop",
+          "rating": 4.3,
+          "category": "Bowls",
+          "isVeg": false,
+          "isBestseller": false
+        },
+        {
+          "id": "item-036",
+          "name": "Nachos Grande",
+          "description": "Crispy tortilla chips loaded with cheese sauce, jalapeños, beans, and salsa",
+          "price": 280,
+          "image": "https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?w=400&h=300&fit=crop",
+          "rating": 4.4,
+          "category": "Starters",
+          "isVeg": true,
+          "isBestseller": true
+        },
+        {
+          "id": "item-037",
+          "name": "Churros (6 pcs)",
+          "description": "Cinnamon-sugar dusted churros with warm chocolate dipping sauce",
+          "price": 200,
+          "image": "https://images.unsplash.com/photo-1624353365286-3f8d62daad51?w=400&h=300&fit=crop",
+          "rating": 4.3,
+          "category": "Desserts",
+          "isVeg": true,
+          "isBestseller": false
+        }
+      ]
+    },
+    {
+      "id": "rest-008",
+      "name": "Green Bowl Café",
+      "image": "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=600&h=400&fit=crop",
+      "cuisine": ["Healthy", "Salads", "Vegan"],
+      "rating": 4.4,
+      "reviewCount": 420,
+      "deliveryTime": "15-25",
+      "deliveryFee": 20,
+      "priceRange": 2,
+      "promoted": false,
+      "isOpen": true,
+      "address": "Marathahalli, Bengaluru",
+      "description": "Wholesome, plant-powered meals and superfood bowls crafted for health-conscious food lovers.",
+      "menu": [
+        {
+          "id": "item-038",
+          "name": "Quinoa Power Bowl",
+          "description": "Quinoa with roasted vegetables, avocado, chickpeas, and tahini dressing",
+          "price": 380,
+          "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=300&fit=crop",
+          "rating": 4.5,
+          "category": "Bowls",
+          "isVeg": true,
+          "isBestseller": true
+        },
+        {
+          "id": "item-039",
+          "name": "Acai Smoothie Bowl",
+          "description": "Blended acai berries topped with granola, banana, berries, and coconut flakes",
+          "price": 320,
+          "image": "https://images.unsplash.com/photo-1590301157890-4810ed352733?w=400&h=300&fit=crop",
+          "rating": 4.6,
+          "category": "Bowls",
+          "isVeg": true,
+          "isBestseller": true
+        },
+        {
+          "id": "item-040",
+          "name": "Caesar Salad",
+          "description": "Crispy romaine lettuce with parmesan, croutons, and classic Caesar dressing",
+          "price": 260,
+          "image": "https://images.unsplash.com/photo-1546793665-c74683f339c1?w=400&h=300&fit=crop",
+          "rating": 4.2,
+          "category": "Salads",
+          "isVeg": true,
+          "isBestseller": false
+        },
+        {
+          "id": "item-041",
+          "name": "Green Detox Juice",
+          "description": "Cold-pressed kale, cucumber, celery, apple, and ginger juice",
+          "price": 180,
+          "image": "https://images.unsplash.com/photo-1622597467836-f3285f2131b8?w=400&h=300&fit=crop",
+          "rating": 4.1,
+          "category": "Beverages",
+          "isVeg": true,
+          "isBestseller": false
+        }
+      ]
+    },
+    {
+      "id": "rest-009",
+      "name": "Royal Tandoor",
+      "image": "https://images.unsplash.com/photo-1544148103-0773bf10d330?w=600&h=400&fit=crop",
+      "cuisine": ["Indian", "Tandoor", "Kebabs"],
+      "rating": 4.3,
+      "reviewCount": 980,
+      "deliveryTime": "25-35",
+      "deliveryFee": 30,
+      "priceRange": 2,
+      "promoted": false,
+      "isOpen": true,
+      "address": "Jayanagar, Bengaluru",
+      "description": "Master tandoor chefs crafting smoky, charred perfection with premium cuts and aromatic marinades.",
+      "menu": [
+        {
+          "id": "item-042",
+          "name": "Tandoori Chicken (Full)",
+          "description": "Whole chicken marinated in yogurt and spices, roasted in clay oven",
+          "price": 450,
+          "image": "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=400&h=300&fit=crop",
+          "rating": 4.7,
+          "category": "Tandoor",
+          "isVeg": false,
+          "isBestseller": true
+        },
+        {
+          "id": "item-043",
+          "name": "Seekh Kebab (6 pcs)",
+          "description": "Minced lamb kebabs with herbs and spices, grilled on skewers",
+          "price": 380,
+          "image": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=400&h=300&fit=crop",
+          "rating": 4.5,
+          "category": "Tandoor",
+          "isVeg": false,
+          "isBestseller": true
+        },
+        {
+          "id": "item-044",
+          "name": "Paneer Tikka (8 pcs)",
+          "description": "Marinated cottage cheese cubes with bell peppers, grilled to perfection",
+          "price": 280,
+          "image": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=400&h=300&fit=crop",
+          "rating": 4.4,
+          "category": "Tandoor",
+          "isVeg": true,
+          "isBestseller": false
+        },
+        {
+          "id": "item-045",
+          "name": "Roomali Roti",
+          "description": "Paper-thin handkerchief bread, soft and perfect for wrapping kebabs",
+          "price": 50,
+          "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&h=300&fit=crop",
+          "rating": 4.0,
+          "category": "Breads",
+          "isVeg": true,
+          "isBestseller": false
+        }
+      ]
+    },
+    {
+      "id": "rest-010",
+      "name": "Sushi Symphony",
+      "image": "https://images.unsplash.com/photo-1579027989536-b7b1f875659b?w=600&h=400&fit=crop",
+      "cuisine": ["Japanese", "Sushi", "Asian"],
+      "rating": 4.8,
+      "reviewCount": 520,
+      "deliveryTime": "35-45",
+      "deliveryFee": 50,
+      "priceRange": 4,
+      "promoted": true,
+      "isOpen": true,
+      "address": "Lavelle Road, Bengaluru",
+      "description": "Premium sushi and sashimi crafted by trained chefs using the freshest ingredients flown in daily.",
+      "menu": [
+        {
+          "id": "item-046",
+          "name": "Salmon Nigiri (4 pcs)",
+          "description": "Hand-pressed sushi rice topped with fresh Atlantic salmon slices",
+          "price": 520,
+          "image": "https://images.unsplash.com/photo-1553621042-f6e147245754?w=400&h=300&fit=crop",
+          "rating": 4.9,
+          "category": "Sushi",
+          "isVeg": false,
+          "isBestseller": true
+        },
+        {
+          "id": "item-047",
+          "name": "Dragon Roll (8 pcs)",
+          "description": "Shrimp tempura roll topped with avocado, eel sauce, and tobiko",
+          "price": 580,
+          "image": "https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?w=400&h=300&fit=crop",
+          "rating": 4.8,
+          "category": "Sushi",
+          "isVeg": false,
+          "isBestseller": true
+        },
+        {
+          "id": "item-048",
+          "name": "Miso Soup",
+          "description": "Traditional Japanese soup with tofu, wakame seaweed, and green onions",
+          "price": 150,
+          "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400&h=300&fit=crop",
+          "rating": 4.2,
+          "category": "Soups",
+          "isVeg": true,
+          "isBestseller": false
+        },
+        {
+          "id": "item-049",
+          "name": "Tempura Udon",
+          "description": "Thick wheat noodles in dashi broth with crispy shrimp and vegetable tempura",
+          "price": 420,
+          "image": "https://images.unsplash.com/photo-1618841557871-b4664fbf0cb3?w=400&h=300&fit=crop",
+          "rating": 4.5,
+          "category": "Main Course",
+          "isVeg": false,
+          "isBestseller": false
+        }
+      ]
+    },
+    {
+      "id": "rest-011",
+      "name": "Chai & Bites",
+      "image": "https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=600&h=400&fit=crop",
+      "cuisine": ["Café", "Snacks", "Beverages"],
+      "rating": 4.0,
+      "reviewCount": 1430,
+      "deliveryTime": "10-20",
+      "deliveryFee": 15,
+      "priceRange": 1,
+      "promoted": false,
+      "isOpen": true,
+      "address": "BTM Layout, Bengaluru",
+      "description": "Cozy café vibes with artisan chai, fresh bakes, and quick Indian snacks perfect for any time of day.",
+      "menu": [
+        {
+          "id": "item-050",
+          "name": "Masala Chai",
+          "description": "Rich, spiced Indian tea brewed with ginger, cardamom, and fresh milk",
+          "price": 60,
+          "image": "https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=400&h=300&fit=crop",
+          "rating": 4.5,
+          "category": "Beverages",
+          "isVeg": true,
+          "isBestseller": true
+        },
+        {
+          "id": "item-051",
+          "name": "Samosa (2 pcs)",
+          "description": "Crispy, flaky pastry filled with spiced potatoes and peas",
+          "price": 80,
+          "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&h=300&fit=crop",
+          "rating": 4.3,
+          "category": "Snacks",
+          "isVeg": true,
+          "isBestseller": true
+        },
+        {
+          "id": "item-052",
+          "name": "Cold Coffee",
+          "description": "Chilled, creamy cold coffee blended with vanilla ice cream",
+          "price": 150,
+          "image": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&h=300&fit=crop",
+          "rating": 4.2,
+          "category": "Beverages",
+          "isVeg": true,
+          "isBestseller": false
+        },
+        {
+          "id": "item-053",
+          "name": "Vada Pav",
+          "description": "Mumbai-style spicy potato fritter in a soft bun with chutneys",
+          "price": 70,
+          "image": "https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=400&h=300&fit=crop",
+          "rating": 4.4,
+          "category": "Snacks",
+          "isVeg": true,
+          "isBestseller": false
+        }
+      ]
+    },
+    {
+      "id": "rest-012",
+      "name": "Flame & Grill",
+      "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb51f73?w=600&h=400&fit=crop",
+      "cuisine": ["BBQ", "Grills", "Steaks"],
+      "rating": 4.5,
+      "reviewCount": 680,
+      "deliveryTime": "30-40",
+      "deliveryFee": 40,
+      "priceRange": 3,
+      "promoted": false,
+      "isOpen": true,
+      "address": "Sarjapur Road, Bengaluru",
+      "description": "Premium steaks and BBQ meats, slow-smoked over hickory wood for deep, smoky flavors.",
+      "menu": [
+        {
+          "id": "item-054",
+          "name": "Ribeye Steak (300g)",
+          "description": "Prime ribeye steak grilled to your liking, served with mashed potatoes and gravy",
+          "price": 850,
+          "image": "https://images.unsplash.com/photo-1600891964092-4316c288032e?w=400&h=300&fit=crop",
+          "rating": 4.8,
+          "category": "Steaks",
+          "isVeg": false,
+          "isBestseller": true
+        },
+        {
+          "id": "item-055",
+          "name": "BBQ Chicken Wings (8 pcs)",
+          "description": "Smoky BBQ glazed chicken wings with ranch dipping sauce",
+          "price": 320,
+          "image": "https://images.unsplash.com/photo-1527477396000-e27163b4bcd1?w=400&h=300&fit=crop",
+          "rating": 4.5,
+          "category": "Starters",
+          "isVeg": false,
+          "isBestseller": true
+        },
+        {
+          "id": "item-056",
+          "name": "Grilled Lamb Chops",
+          "description": "Herb-marinated lamb chops grilled over open flame with mint sauce",
+          "price": 680,
+          "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=300&fit=crop",
+          "rating": 4.6,
+          "category": "Main Course",
+          "isVeg": false,
+          "isBestseller": false
+        },
+        {
+          "id": "item-057",
+          "name": "Coleslaw",
+          "description": "Fresh, creamy coleslaw with cabbage, carrots, and tangy dressing",
+          "price": 120,
+          "image": "https://images.unsplash.com/photo-1625944525533-473f1a3d54e7?w=400&h=300&fit=crop",
+          "rating": 3.9,
+          "category": "Sides",
+          "isVeg": true,
+          "isBestseller": false
+        }
+      ]
+    }
+  ],
+  "categories": [
+    { "id": "cat-01", "name": "Pizza", "emoji": "🍕", "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=200&h=200&fit=crop", "color": "#FF6B35" },
+    { "id": "cat-02", "name": "Desserts", "emoji": "🍰", "image": "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=200&h=200&fit=crop", "color": "#FF4081" },
+    { "id": "cat-03", "name": "Burgers", "emoji": "🍔", "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=200&h=200&fit=crop", "color": "#FFD93D" },
+    { "id": "cat-04", "name": "Cake", "emoji": "🎂", "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=200&h=200&fit=crop", "color": "#E91E63" },
+    { "id": "cat-05", "name": "Samosa", "emoji": "🥟", "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=200&h=200&fit=crop", "color": "#FF8A65" },
+    { "id": "cat-06", "name": "Momo", "emoji": "🥟", "image": "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=200&h=200&fit=crop", "color": "#9C27B0" },
+    { "id": "cat-07", "name": "Noodles", "emoji": "🍜", "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=200&h=200&fit=crop", "color": "#4CAF50" },
+    { "id": "cat-08", "name": "Indian", "emoji": "🍛", "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=200&h=200&fit=crop", "color": "#FF5722" },
+    { "id": "cat-09", "name": "Dosa", "emoji": "🫓", "image": "https://images.unsplash.com/photo-1668236543090-82eb5eafe6d2?w=200&h=200&fit=crop", "color": "#8BC34A" },
+    { "id": "cat-10", "name": "Chole Bhature", "emoji": "🍛", "image": "https://images.unsplash.com/photo-1626132647523-66f5bf380027?w=200&h=200&fit=crop", "color": "#795548" },
+    { "id": "cat-11", "name": "Coffee", "emoji": "☕", "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=200&h=200&fit=crop", "color": "#00BCD4" },
+    { "id": "cat-12", "name": "Fast Food", "emoji": "🍟", "image": "https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=200&h=200&fit=crop", "color": "#FFC107" }
+  ],
+  "promos": [
+    {
+      "id": "promo-01",
+      "title": "50% OFF",
+      "subtitle": "on your first order",
+      "code": "FEAST50",
+      "gradient": ["#FF6B35", "#FF8A65"],
+      "icon": "mdi-fire"
+    },
+    {
+      "id": "promo-02",
+      "title": "Free Delivery",
+      "subtitle": "on orders above ₹499",
+      "code": "FREEDEL",
+      "gradient": ["#9C27B0", "#E040FB"],
+      "icon": "mdi-truck-fast"
+    },
+    {
+      "id": "promo-03",
+      "title": "₹100 Cashback",
+      "subtitle": "using UPI payments",
+      "code": "UPIBACK",
+      "gradient": ["#00BCD4", "#4DD0E1"],
+      "icon": "mdi-cash-multiple"
+    }
+  ]
+}

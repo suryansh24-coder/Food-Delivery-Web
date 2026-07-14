@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="flameGrad" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#FF6B35"/>
+      <stop offset="100%" stop-color="#FF8A65"/>
+    </linearGradient>
+    <linearGradient id="potGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF8A65"/>
+      <stop offset="100%" stop-color="#FF6B35"/>
+    </linearGradient>
+  </defs>
+  <!-- Orange background circle -->
+  <circle cx="256" cy="256" r="256" fill="url(#flameGrad)"/>
+  <!-- Flame -->
+  <path d="M256 60 C256 60 310 130 310 180 C310 210 300 240 290 260 C330 220 340 170 340 170 C340 170 380 240 380 290 C380 340 350 380 310 400 C320 370 320 340 300 320 C310 360 290 390 256 400 C222 390 202 360 212 320 C192 340 192 370 202 400 C162 380 132 340 132 290 C132 240 172 170 172 170 C172 170 182 220 222 260 C212 240 202 210 202 180 C202 130 256 60 256 60Z" fill="white" opacity="0.95"/>
+  <!-- Pot / Wok -->
+  <path d="M140 370 C140 370 170 430 256 430 C342 430 372 370 372 370 L385 370 C385 370 380 375 380 375 C380 375 355 445 256 445 C157 445 132 375 132 375 L132 370 Z" fill="white" opacity="0.95"/>
+  <!-- Pot handles -->
+  <path d="M128 368 C110 368 105 378 115 382 L138 375 Z" fill="white" opacity="0.9"/>
+  <path d="M384 368 C402 368 407 378 397 382 L374 375 Z" fill="white" opacity="0.9"/>
+  <!-- Text: FEAST -->
+  <text x="256" y="340" text-anchor="middle" font-family="'Arial Rounded MT Bold', 'Nunito', sans-serif" font-weight="900" font-size="54" fill="white" letter-spacing="2">FEAST</text>
+  <!-- Text: FAST -->
+  <text x="256" y="390" text-anchor="middle" font-family="'Arial Rounded MT Bold', 'Nunito', sans-serif" font-weight="900" font-size="54" fill="white" letter-spacing="2">FAST</text>
+</svg>
