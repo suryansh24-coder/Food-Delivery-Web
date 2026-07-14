@@ -4,17 +4,9 @@
     <div class="hero-glow hero-glow-1" />
     <div class="hero-glow hero-glow-2" />
 
-    <!-- ── Ambient glow layer ──────────────────────────────────────── -->
-    <div class="platter-ambient d-none d-lg-block" aria-hidden="true" />
-
-    <!-- ── Big platter (clockwise, half-visible at right edge) ─────── -->
-    <div class="platter-ring platter-big d-none d-lg-block" aria-hidden="true">
-      <img src="/images/platter-small.png" class="platter-img" alt="" draggable="false" />
-    </div>
-
-    <!-- ── Small platter (counter-clockwise, lower-left of big) ────── -->
-    <div class="platter-ring platter-small d-none d-lg-block" aria-hidden="true">
-      <img src="/images/platter-big.png" class="platter-img" alt="" draggable="false" />
+    <!-- ── Platter image — static, half-visible at right edge ─────── -->
+    <div class="platter-hero d-none d-lg-block" aria-hidden="true">
+      <img src="/images/platter-small.png" class="platter-hero-img" alt="" draggable="false" />
     </div>
 
     <!-- ── Floating Info Cards ────────────────────────────────────── -->
@@ -209,122 +201,31 @@ const handleSearch = () => {
 .hero-glow-1 { width: 400px; height: 400px; background: #FF6B35; top: 10%; left: -10%; }
 .hero-glow-2 { width: 300px; height: 300px; background: #FF8A65; bottom: 10%; right: -5%; }
 
-/* ── Platters — each is independently absolutely positioned in hero ── */
-
-/* Shared ring base */
-.platter-ring {
+/* ── Static Platter Image ────────────────────────────────────────── */
+.platter-hero {
   position: absolute;
+  right: -120px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 580px;
+  height: 580px;
   border-radius: 50%;
   overflow: hidden;
   pointer-events: none;
-}
-
-/* Ambient glow — sits between both platters */
-.platter-ambient {
-  position: absolute;
-  width: 520px;
-  height: 520px;
-  right: -40px;
-  top: 50%;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(255, 107, 53, 0.22) 0%,
-    rgba(255, 138, 101, 0.09) 45%,
-    transparent 70%
-  );
-  filter: blur(60px);
-  animation: glow-pulse 4s ease-in-out infinite;
-  pointer-events: none;
-  z-index: 0;
-}
-
-@keyframes glow-pulse {
-  0%, 100% { opacity: 0.6;  transform: translateY(-50%) scale(1);    }
-  50%       { opacity: 1;   transform: translateY(-50%) scale(1.12); }
-}
-
-/*
-  BIG PLATTER — 460 px, clockwise 50 s
-  Anchored to the right edge; ~110 px clipped by hero overflow:hidden.
-  Vertically centered in hero.
-*/
-.platter-big {
-  width: 460px;
-  height: 460px;
-  right: -110px;        /* clips ~110 px off right — shows ~77 % of plate */
-  top: 50%;
-  transform: translateY(-50%);
-  animation: platter-big-cw 50s linear infinite;
-  z-index: 2;
+  z-index: 1;
   box-shadow:
-    0 28px 80px rgba(255, 107, 53, 0.22),
-    0 0 0 5px  rgba(255, 107, 53, 0.14),
-    0 0 0 13px rgba(255, 107, 53, 0.05);
+    0 32px 100px rgba(255, 107, 53, 0.15),
+    0 0 0 6px rgba(255, 107, 53, 0.08),
+    0 0 0 14px rgba(255, 107, 53, 0.03);
 }
 
-.platter-big::after {
-  content: '';
-  position: absolute;
-  inset: -7px;
-  border-radius: 50%;
-  border: 2px solid rgba(255, 107, 53, 0.38);
-  animation: ring-breathe 4s ease-in-out infinite;
-  pointer-events: none;
-}
-
-@keyframes platter-big-cw {
-  from { transform: translateY(-50%) rotate(0deg);   }
-  to   { transform: translateY(-50%) rotate(360deg); }
-}
-
-/*
-  SMALL PLATTER — 230 px, counter-clockwise 30 s
-  Tucked below-left of big platter, stays firmly in the right panel:
-    • right: 60px  → left edge ~990 px from screen-left, well inside right zone
-    • top: 60%     → bottom edge at ~619 px, within 90 vh hero
-*/
-.platter-small {
-  width: 230px;
-  height: 230px;
-  right: 60px;
-  top: 60%;
-  animation: platter-small-ccw 30s linear infinite;
-  z-index: 3;
-  box-shadow:
-    0 16px 50px rgba(0, 0, 0, 0.30),
-    0 0 0 4px  rgba(255, 255, 255, 0.15),
-    0 0 0 10px rgba(255, 107, 53, 0.10);
-}
-
-.platter-small::after {
-  content: '';
-  position: absolute;
-  inset: -6px;
-  border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.25);
-  animation: ring-breathe 4s ease-in-out infinite;
-  animation-delay: 2s;
-  pointer-events: none;
-}
-
-@keyframes platter-small-ccw {
-  from { transform: rotate(0deg);    }
-  to   { transform: rotate(-360deg); }
-}
-
-@keyframes ring-breathe {
-  0%, 100% { opacity: 0.25; transform: scale(1);     }
-  50%       { opacity: 0.85; transform: scale(1.03);  }
-}
-
-.platter-img {
+.platter-hero-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   user-select: none;
   -webkit-user-drag: none;
+  display: block;
 }
 
 /* ── Floating Cards ──────────────────────────────────────────────── */
