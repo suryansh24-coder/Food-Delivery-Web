@@ -424,7 +424,7 @@
           "name": "Masala Dosa",
           "description": "Crispy rice and lentil crepe filled with spiced potato, served with chutneys and sambar",
           "price": 150,
-          "image": "https://images.unsplash.com/photo-1668236543090-82eb5eada77a?w=400&h=300&fit=crop",
+          "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=400&h=300&fit=crop",
           "rating": 4.5,
           "category": "South Indian",
           "isVeg": true,
@@ -446,7 +446,7 @@
           "name": "Appam with Stew",
           "description": "Lacy rice hoppers with a fragrant coconut vegetable stew",
           "price": 200,
-          "image": "https://images.unsplash.com/photo-1630383249896-424e482df921?w=400&h=300&fit=crop",
+          "image": "https://images.unsplash.com/photo-1585272350977-4ec5df36d3b5?w=400&h=300&fit=crop",
           "rating": 4.3,
           "category": "South Indian",
           "isVeg": true,
@@ -468,7 +468,7 @@
     {
       "id": "rest-007",
       "name": "Taco Loco",
-      "image": "https://images.unsplash.com/photo-1653748844218-a6978cc57b9e?w=600&h=400&fit=crop",
+      "image": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=600&h=400&fit=crop",
       "cuisine": ["Mexican", "Tex-Mex", "Latin"],
       "rating": 4.2,
       "reviewCount": 540,
@@ -841,10 +841,10 @@
     { "id": "cat-06", "name": "Momo", "emoji": "🥟", "image": "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=200&h=200&fit=crop", "color": "#9C27B0" },
     { "id": "cat-07", "name": "Noodles", "emoji": "🍜", "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=200&h=200&fit=crop", "color": "#4CAF50" },
     { "id": "cat-08", "name": "Indian", "emoji": "🍛", "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=200&h=200&fit=crop", "color": "#FF5722" },
-    { "id": "cat-09", "name": "Dosa", "emoji": "🫓", "image": "https://images.unsplash.com/photo-1668236543090-82eb5eafe6d2?w=200&h=200&fit=crop", "color": "#8BC34A" },
-    { "id": "cat-10", "name": "Chole Bhature", "emoji": "🍛", "image": "https://images.unsplash.com/photo-1626132647523-66f5bf380027?w=200&h=200&fit=crop", "color": "#795548" },
+    { "id": "cat-09", "name": "Dosa", "emoji": "🫓", "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=200&h=200&fit=crop", "color": "#8BC34A" },
+    { "id": "cat-10", "name": "Chole Bhature", "emoji": "🍛", "image": "https://images.unsplash.com/photo-1512058454905-6b841e7ad132?w=200&h=200&fit=crop", "color": "#795548" },
     { "id": "cat-11", "name": "Coffee", "emoji": "☕", "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=200&h=200&fit=crop", "color": "#00BCD4" },
-    { "id": "cat-12", "name": "Fast Food", "emoji": "🍟", "image": "https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=200&h=200&fit=crop", "color": "#FFC107" }
+    { "id": "cat-12", "name": "Fast Food", "emoji": "🍟", "image": "https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=200&h=200&fit=crop", "color": "#FFC107" }
   ],
   "promos": [
     {

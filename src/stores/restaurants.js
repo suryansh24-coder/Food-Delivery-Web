@@ -26,6 +26,7 @@ export const useRestaurantStore = defineStore('restaurants', () => {
   const promos = ref(data.promos)
   
   const searchQuery = ref('')
+  const locationQuery = ref('')
   const selectedCategory = ref(null)
   const sortBy = ref('default') // 'default', 'rating', 'deliveryTime', 'priceLow', 'priceHigh'
 
@@ -52,6 +53,12 @@ export const useRestaurantStore = defineStore('restaurants', () => {
   const filteredRestaurants = computed(() => {
     let result = [...restaurants.value]
 
+    // Location filter — O(n) address matching
+    if (locationQuery.value.trim()) {
+      const loc = locationQuery.value.toLowerCase().trim()
+      result = result.filter((r) => r.address.toLowerCase().includes(loc))
+    }
+
     // Search filter — O(n) string matching
     if (searchQuery.value.trim()) {
       const query = searchQuery.value.toLowerCase().trim()
@@ -59,7 +66,7 @@ export const useRestaurantStore = defineStore('restaurants', () => {
         return (
           r.name.toLowerCase().includes(query) ||
           r.cuisine.some((c) => c.toLowerCase().includes(query)) ||
-          r.address.toLowerCase().includes(query)
+          r.menu.some((item) => item.name.toLowerCase().includes(query))
         )
       })
     }
@@ -172,6 +179,10 @@ export const useRestaurantStore = defineStore('restaurants', () => {
     searchQuery.value = query
   }
 
+  const setLocationQuery = (loc) => {
+    locationQuery.value = loc
+  }
+
   const setCategory = (category) => {
     selectedCategory.value = category === selectedCategory.value ? null : category
   }
@@ -182,6 +193,7 @@ export const useRestaurantStore = defineStore('restaurants', () => {
 
   const clearFilters = () => {
     searchQuery.value = ''
+    locationQuery.value = ''
     selectedCategory.value = null
     sortBy.value = 'default'
   }
@@ -192,6 +204,7 @@ export const useRestaurantStore = defineStore('restaurants', () => {
     categories,
     promos,
     searchQuery,
+    locationQuery,
     selectedCategory,
     sortBy,
     // Computed
@@ -204,6 +217,7 @@ export const useRestaurantStore = defineStore('restaurants', () => {
     getRestaurantById,
     getMenuCategories,
     setSearchQuery,
+    setLocationQuery,
     setCategory,
     setSortBy,
     clearFilters,

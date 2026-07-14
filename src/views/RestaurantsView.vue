@@ -81,8 +81,19 @@
         </div>
 
         <!-- Active Filters -->
-        <div v-if="hasActiveFilters" class="d-flex align-center ga-2 pb-4">
+        <div v-if="hasActiveFilters" class="d-flex align-center flex-wrap ga-2 pb-4">
           <span class="text-body-2" style="opacity: 0.5;">Active filters:</span>
+          <v-chip
+            v-if="locationQuery"
+            size="small"
+            closable
+            color="primary"
+            variant="tonal"
+            prepend-icon="mdi-map-marker"
+            @click:close="clearLocationFilter"
+          >
+            Near: {{ locationQuery }}
+          </v-chip>
           <v-chip
             v-if="searchQuery"
             size="small"
@@ -232,7 +243,7 @@ import { storeToRefs } from 'pinia'
 const restaurantStore = useRestaurantStore()
 const userStore = useUserStore()
 
-const { filteredRestaurants, categories, searchQuery, selectedCategory, sortBy } = storeToRefs(restaurantStore)
+const { filteredRestaurants, categories, searchQuery, locationQuery, selectedCategory, sortBy } = storeToRefs(restaurantStore)
 
 const currentSort = computed({
   get: () => sortBy.value,
@@ -248,7 +259,7 @@ const sortOptions = [
 ]
 
 const hasActiveFilters = computed(() => {
-  return searchQuery.value || selectedCategory.value
+  return searchQuery.value || selectedCategory.value || locationQuery.value
 })
 
 const handleSearch = (val) => {
@@ -269,6 +280,10 @@ const clearCategoryFilter = () => {
 
 const clearSearchFilter = () => {
   restaurantStore.setSearchQuery('')
+}
+
+const clearLocationFilter = () => {
+  restaurantStore.setLocationQuery('')
 }
 
 const clearAllFilters = () => {

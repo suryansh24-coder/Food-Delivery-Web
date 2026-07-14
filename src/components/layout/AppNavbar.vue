@@ -63,6 +63,27 @@
           <v-icon icon="mdi-magnify" />
         </v-btn>
 
+        <!-- Help -->
+        <v-btn
+          icon
+          variant="text"
+          size="small"
+          rounded="pill"
+          class="nav-action-btn d-none d-md-flex"
+          @click="helpOpen = true"
+          id="nav-help"
+        >
+          <v-icon icon="mdi-help-circle-outline" />
+          <v-tooltip
+            activator="parent"
+            location="bottom"
+            :offset="8"
+            content-class="nav-tooltip-content"
+          >
+            Help
+          </v-tooltip>
+        </v-btn>
+
         <!-- Dark Mode Toggle -->
         <v-btn
           icon
@@ -169,6 +190,152 @@
     </v-expand-transition>
   </v-app-bar>
 
+  <!-- Help Dialog -->
+  <v-dialog v-model="helpOpen" max-width="640" scrollable>
+    <v-card rounded="xl">
+      <v-card-title class="d-flex align-center justify-space-between pa-6 pb-3">
+        <div class="d-flex align-center ga-3">
+          <v-icon icon="mdi-help-circle" color="primary" size="28" />
+          <span class="ff-heading text-h6 font-weight-bold">Help &amp; Documentation</span>
+        </div>
+        <v-btn icon variant="text" size="small" rounded="pill" @click="helpOpen = false">
+          <v-icon icon="mdi-close" />
+        </v-btn>
+      </v-card-title>
+
+      <v-divider />
+
+      <v-card-text class="pa-6">
+        <v-expansion-panels variant="accordion" rounded="lg">
+
+          <!-- Getting Started -->
+          <v-expansion-panel>
+            <v-expansion-panel-title>
+              <div class="d-flex align-center ga-3">
+                <v-icon icon="mdi-rocket-launch-outline" color="primary" size="20" />
+                <span class="font-weight-semibold">Getting Started</span>
+              </div>
+            </v-expansion-panel-title>
+            <v-expansion-panel-text>
+              <ol class="help-list">
+                <li>Enter your <strong>delivery location</strong> in the location field on the home page.</li>
+                <li>Use the <strong>search bar</strong> to find restaurants, cuisines, or specific dishes.</li>
+                <li>Press <strong>Search</strong> or hit Enter to browse matching results.</li>
+                <li>Click any restaurant to view its full menu.</li>
+              </ol>
+            </v-expansion-panel-text>
+          </v-expansion-panel>
+
+          <!-- Browsing Restaurants -->
+          <v-expansion-panel>
+            <v-expansion-panel-title>
+              <div class="d-flex align-center ga-3">
+                <v-icon icon="mdi-silverware-fork-knife" color="primary" size="20" />
+                <span class="font-weight-semibold">Browsing Restaurants</span>
+              </div>
+            </v-expansion-panel-title>
+            <v-expansion-panel-text>
+              <ul class="help-list">
+                <li>Visit the <strong>Restaurants</strong> page from the navigation bar.</li>
+                <li>Filter by cuisine type using the category chips at the top.</li>
+                <li>Sort restaurants by rating, delivery time, or price.</li>
+                <li>Each card shows the restaurant's rating, estimated delivery time, and minimum order.</li>
+              </ul>
+            </v-expansion-panel-text>
+          </v-expansion-panel>
+
+          <!-- Placing an Order -->
+          <v-expansion-panel>
+            <v-expansion-panel-title>
+              <div class="d-flex align-center ga-3">
+                <v-icon icon="mdi-cart-outline" color="primary" size="20" />
+                <span class="font-weight-semibold">Placing an Order</span>
+              </div>
+            </v-expansion-panel-title>
+            <v-expansion-panel-text>
+              <ol class="help-list">
+                <li>Open a restaurant and browse its menu sections.</li>
+                <li>Tap <strong>Add to Cart</strong> on any item you want.</li>
+                <li>Click the <strong>cart icon</strong> in the top-right to review your order.</li>
+                <li>Adjust quantities or remove items as needed.</li>
+                <li>Tap <strong>Checkout</strong> to complete your order.</li>
+              </ol>
+            </v-expansion-panel-text>
+          </v-expansion-panel>
+
+          <!-- Search Tips -->
+          <v-expansion-panel>
+            <v-expansion-panel-title>
+              <div class="d-flex align-center ga-3">
+                <v-icon icon="mdi-magnify" color="primary" size="20" />
+                <span class="font-weight-semibold">Search Tips</span>
+              </div>
+            </v-expansion-panel-title>
+            <v-expansion-panel-text>
+              <ul class="help-list">
+                <li>Search by <strong>restaurant name</strong> (e.g., "Pizza Palace").</li>
+                <li>Search by <strong>cuisine</strong> (e.g., "Italian", "Chinese", "Vegan").</li>
+                <li>Search by <strong>dish</strong> (e.g., "Biryani", "Burger", "Sushi").</li>
+                <li>Combine terms for more precise results.</li>
+              </ul>
+            </v-expansion-panel-text>
+          </v-expansion-panel>
+
+          <!-- Theme & Accessibility -->
+          <v-expansion-panel>
+            <v-expansion-panel-title>
+              <div class="d-flex align-center ga-3">
+                <v-icon icon="mdi-palette-outline" color="primary" size="20" />
+                <span class="font-weight-semibold">Theme &amp; Accessibility</span>
+              </div>
+            </v-expansion-panel-title>
+            <v-expansion-panel-text>
+              <ul class="help-list">
+                <li>Toggle between <strong>Dark Mode</strong> and <strong>Light Mode</strong> using the moon/sun icon in the navbar.</li>
+                <li>The app remembers your theme preference across visits.</li>
+                <li>All interactive elements are keyboard-navigable.</li>
+              </ul>
+            </v-expansion-panel-text>
+          </v-expansion-panel>
+
+          <!-- FAQ -->
+          <v-expansion-panel>
+            <v-expansion-panel-title>
+              <div class="d-flex align-center ga-3">
+                <v-icon icon="mdi-frequently-asked-questions" color="primary" size="20" />
+                <span class="font-weight-semibold">FAQ</span>
+              </div>
+            </v-expansion-panel-title>
+            <v-expansion-panel-text>
+              <div class="help-faq">
+                <div class="faq-item">
+                  <p class="font-weight-bold mb-1">Why isn't my location being detected?</p>
+                  <p class="text-medium-emphasis">Type your area, city, or pincode manually in the location field — automatic detection is not enabled in this version.</p>
+                </div>
+                <v-divider class="my-3" />
+                <div class="faq-item">
+                  <p class="font-weight-bold mb-1">Can I order from multiple restaurants at once?</p>
+                  <p class="text-medium-emphasis">Currently the cart supports items from one restaurant at a time. Adding items from a different restaurant will clear your existing cart.</p>
+                </div>
+                <v-divider class="my-3" />
+                <div class="faq-item">
+                  <p class="font-weight-bold mb-1">How do I remove an item from my cart?</p>
+                  <p class="text-medium-emphasis">Open the cart drawer and use the minus (−) button to reduce quantity, or tap the trash icon to remove the item entirely.</p>
+                </div>
+              </div>
+            </v-expansion-panel-text>
+          </v-expansion-panel>
+
+        </v-expansion-panels>
+      </v-card-text>
+
+      <v-divider />
+      <v-card-actions class="pa-4 justify-center">
+        <span class="text-caption text-medium-emphasis">Feast Fast v1.0 — Fast food, faster delivery 🚀</span>
+      </v-card-actions>
+    </v-card>
+  </v-dialog>
+
   <!-- Mobile Navigation Drawer -->
   <v-navigation-drawer
     v-model="mobileMenuOpen"
@@ -232,6 +399,12 @@
         rounded="pill"
         @click="userStore.toggleDarkMode()"
       />
+      <v-list-item
+        prepend-icon="mdi-help-circle-outline"
+        title="Help"
+        rounded="pill"
+        @click="mobileMenuOpen = false; helpOpen = true"
+      />
     </v-list>
   </v-navigation-drawer>
 </template>
@@ -253,6 +426,7 @@ const restaurantStore = useRestaurantStore()
 const mobileMenuOpen = ref(false)
 const mobileSearchOpen = ref(false)
 const searchInput = ref('')
+const helpOpen = ref(false)
 
 const handleSearch = () => {
   if (searchInput.value.trim()) {
@@ -301,6 +475,25 @@ const clearSearch = () => {
   min-width: 18px;
   height: 18px;
   padding: 0 4px;
+}
+
+.help-list {
+  padding-left: 1.2rem;
+  line-height: 2;
+  font-size: 0.9rem;
+}
+
+.help-list li {
+  margin-bottom: 2px;
+}
+
+.help-faq {
+  font-size: 0.9rem;
+}
+
+.faq-item p {
+  margin: 0;
+  line-height: 1.6;
 }
 </style>
 
