@@ -211,7 +211,7 @@ const handleSearch = () => {
 /* ── Hero Visual (circular food image) ──────────────────────────── */
 .hero-visual {
   position: absolute;
-  right: -80px;
+  right: -100px;
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
@@ -219,8 +219,8 @@ const handleSearch = () => {
 }
 
 .hero-visual-ring {
-  width: 520px;
-  height: 520px;
+  width: 420px;
+  height: 420px;
   border-radius: 50%;
   overflow: hidden;
   box-shadow:
