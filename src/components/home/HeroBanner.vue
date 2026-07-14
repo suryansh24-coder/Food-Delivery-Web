@@ -4,24 +4,17 @@
     <div class="hero-glow hero-glow-1" />
     <div class="hero-glow hero-glow-2" />
 
-    <!-- ── Rotating Platter Scene (half-visible at right edge) ─────── -->
-    <div class="platter-scene d-none d-lg-block" aria-hidden="true">
-      <div class="platter-glow" />
+    <!-- ── Ambient glow layer ──────────────────────────────────────── -->
+    <div class="platter-ambient d-none d-lg-block" aria-hidden="true" />
 
-      <!-- Big platter: top-view dish spread — clockwise -->
-      <div class="platter-ring platter-big">
-        <img src="/images/platter-big.png" class="platter-img" alt="" draggable="false" />
-      </div>
+    <!-- ── Big platter (clockwise, half-visible at right edge) ─────── -->
+    <div class="platter-ring platter-big d-none d-lg-block" aria-hidden="true">
+      <img src="/images/platter-small.png" class="platter-img" alt="" draggable="false" />
+    </div>
 
-      <!-- Small platter: chutneys — counter-clockwise -->
-      <div class="platter-ring platter-small">
-        <img
-          src="/images/platter-small.png"
-          class="platter-img"
-          alt=""
-          draggable="false"
-        />
-      </div>
+    <!-- ── Small platter (counter-clockwise, lower-left of big) ────── -->
+    <div class="platter-ring platter-small d-none d-lg-block" aria-hidden="true">
+      <img src="/images/platter-big.png" class="platter-img" alt="" draggable="false" />
     </div>
 
     <!-- ── Floating Info Cards ────────────────────────────────────── -->
@@ -216,93 +209,114 @@ const handleSearch = () => {
 .hero-glow-1 { width: 400px; height: 400px; background: #FF6B35; top: 10%; left: -10%; }
 .hero-glow-2 { width: 300px; height: 300px; background: #FF8A65; bottom: 10%; right: -5%; }
 
-/* ── Rotating Platter Scene ──────────────────────────────────────── */
-.platter-scene {
-  position: absolute;
-  right: -150px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 620px;
-  height: 660px;
-  pointer-events: none;
-  z-index: 1;
-}
+/* ── Platters — each is independently absolutely positioned in hero ── */
 
-/* Ambient pulsing glow behind both platters */
-.platter-glow {
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  top: 60px;
-  left: 60px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 107, 53, 0.22) 0%, rgba(255, 138, 101, 0.08) 45%, transparent 70%);
-  filter: blur(48px);
-  animation: glow-pulse 4s ease-in-out infinite;
-}
-
-@keyframes glow-pulse {
-  0%, 100% { opacity: 0.7; transform: scale(1); }
-  50%       { opacity: 1;   transform: scale(1.12); }
-}
-
+/* Shared ring base */
 .platter-ring {
   position: absolute;
   border-radius: 50%;
   overflow: hidden;
+  pointer-events: none;
 }
 
-/* ── Big platter — 480px, top-right of scene, clockwise 50s ── */
+/* Ambient glow — sits between both platters */
+.platter-ambient {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  right: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 107, 53, 0.22) 0%,
+    rgba(255, 138, 101, 0.09) 45%,
+    transparent 70%
+  );
+  filter: blur(60px);
+  animation: glow-pulse 4s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.6;  transform: translateY(-50%) scale(1);    }
+  50%       { opacity: 1;   transform: translateY(-50%) scale(1.12); }
+}
+
+/*
+  BIG PLATTER — 460 px, clockwise 50 s
+  Anchored to the right edge; ~110 px clipped by hero overflow:hidden.
+  Vertically centered in hero.
+*/
 .platter-big {
-  width: 480px;
-  height: 480px;
-  top: 20px;
-  left: 100px;
-  animation: platter-cw 50s linear infinite;
+  width: 460px;
+  height: 460px;
+  right: -110px;        /* clips ~110 px off right — shows ~77 % of plate */
+  top: 50%;
+  transform: translateY(-50%);
+  animation: platter-big-cw 50s linear infinite;
+  z-index: 2;
   box-shadow:
-    0 30px 90px rgba(255, 107, 53, 0.22),
-    0 0 0 5px rgba(255, 107, 53, 0.12),
-    0 0 0 12px rgba(255, 107, 53, 0.05),
-    inset 0 0 0 2px rgba(255, 255, 255, 0.08);
+    0 28px 80px rgba(255, 107, 53, 0.22),
+    0 0 0 5px  rgba(255, 107, 53, 0.14),
+    0 0 0 13px rgba(255, 107, 53, 0.05);
 }
 
-/* Shimmering ring that breathes around the big platter */
 .platter-big::after {
   content: '';
   position: absolute;
-  inset: -6px;
+  inset: -7px;
   border-radius: 50%;
-  border: 2px solid rgba(255, 107, 53, 0.3);
-  animation: ring-breathe 3.5s ease-in-out infinite;
+  border: 2px solid rgba(255, 107, 53, 0.38);
+  animation: ring-breathe 4s ease-in-out infinite;
+  pointer-events: none;
 }
 
-@keyframes ring-breathe {
-  0%, 100% { opacity: 0.3; transform: scale(1); }
-  50%       { opacity: 0.9; transform: scale(1.025); }
+@keyframes platter-big-cw {
+  from { transform: translateY(-50%) rotate(0deg);   }
+  to   { transform: translateY(-50%) rotate(360deg); }
 }
 
-/* ── Small platter — 250px, bottom-left of scene, counter-clockwise 30s ── */
+/*
+  SMALL PLATTER — 230 px, counter-clockwise 30 s
+  Tucked below-left of big platter, stays firmly in the right panel:
+    • right: 60px  → left edge ~990 px from screen-left, well inside right zone
+    • top: 60%     → bottom edge at ~619 px, within 90 vh hero
+*/
 .platter-small {
-  width: 250px;
-  height: 250px;
-  bottom: 20px;
-  left: 30px;
-  animation: platter-ccw 30s linear infinite;
-  z-index: 2;
+  width: 230px;
+  height: 230px;
+  right: 60px;
+  top: 60%;
+  animation: platter-small-ccw 30s linear infinite;
+  z-index: 3;
   box-shadow:
-    0 16px 48px rgba(0, 0, 0, 0.32),
-    0 0 0 4px rgba(255, 255, 255, 0.12),
-    0 0 0 9px rgba(255, 107, 53, 0.08);
+    0 16px 50px rgba(0, 0, 0, 0.30),
+    0 0 0 4px  rgba(255, 255, 255, 0.15),
+    0 0 0 10px rgba(255, 107, 53, 0.10);
 }
 
 .platter-small::after {
   content: '';
   position: absolute;
-  inset: -5px;
+  inset: -6px;
   border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.18);
+  border: 2px solid rgba(255, 255, 255, 0.25);
   animation: ring-breathe 4s ease-in-out infinite;
-  animation-delay: 1.5s;
+  animation-delay: 2s;
+  pointer-events: none;
+}
+
+@keyframes platter-small-ccw {
+  from { transform: rotate(0deg);    }
+  to   { transform: rotate(-360deg); }
+}
+
+@keyframes ring-breathe {
+  0%, 100% { opacity: 0.25; transform: scale(1);     }
+  50%       { opacity: 0.85; transform: scale(1.03);  }
 }
 
 .platter-img {
@@ -311,15 +325,6 @@ const handleSearch = () => {
   object-fit: cover;
   user-select: none;
   -webkit-user-drag: none;
-}
-
-@keyframes platter-cw {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
-}
-@keyframes platter-ccw {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(-360deg); }
 }
 
 /* ── Floating Cards ──────────────────────────────────────────────── */
