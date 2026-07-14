@@ -16,7 +16,7 @@
       <!-- Small platter: chutneys — counter-clockwise -->
       <div class="platter-ring platter-small">
         <img
-          src="https://images.unsplash.com/photo-1596797038530-2c107229654b?w=500&h=500&fit=crop"
+          src="/images/platter-small.png"
           class="platter-img"
           alt=""
           draggable="false"

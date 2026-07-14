@@ -116,18 +116,41 @@
         </div>
 
         <!-- Veg/Non-veg filter -->
-        <div class="d-flex ga-3 mb-6 align-center" id="menu-veg-filter">
-          <v-btn-toggle v-model="vegFilter" rounded="lg" density="compact" color="primary" variant="outlined">
-            <v-btn value="all" class="text-none" size="small">All</v-btn>
-            <v-btn value="veg" class="text-none" size="small">
-              <span class="ff-badge-veg mr-1" style="width: 8px; height: 8px; border-radius: 2px; display: inline-block; background: #4CAF50;" />
+        <div class="d-flex ga-3 mb-6 align-center flex-wrap" id="menu-veg-filter">
+          <div class="d-flex ga-2">
+            <v-btn
+              rounded="pill"
+              size="small"
+              :variant="vegFilter === 'all' ? 'flat' : 'outlined'"
+              :color="vegFilter === 'all' ? 'primary' : 'default'"
+              class="text-none veg-pill-btn"
+              @click="vegFilter = 'all'"
+            >
+              All
+            </v-btn>
+            <v-btn
+              rounded="pill"
+              size="small"
+              :variant="vegFilter === 'veg' ? 'flat' : 'outlined'"
+              :color="vegFilter === 'veg' ? 'success' : 'default'"
+              class="text-none veg-pill-btn"
+              @click="vegFilter = 'veg'"
+            >
+              <span class="veg-dot mr-2" style="background: #4CAF50;" />
               Veg
             </v-btn>
-            <v-btn value="nonveg" class="text-none" size="small">
-              <span class="ff-badge-nonveg mr-1" style="width: 8px; height: 8px; border-radius: 2px; display: inline-block; background: #F44336;" />
+            <v-btn
+              rounded="pill"
+              size="small"
+              :variant="vegFilter === 'nonveg' ? 'flat' : 'outlined'"
+              :color="vegFilter === 'nonveg' ? 'error' : 'default'"
+              class="text-none veg-pill-btn"
+              @click="vegFilter = 'nonveg'"
+            >
+              <span class="veg-dot mr-2" style="background: #F44336;" />
               Non-Veg
             </v-btn>
-          </v-btn-toggle>
+          </div>
 
           <v-spacer />
 
@@ -397,6 +420,21 @@ onMounted(() => {
 </script>
 
 <style scoped>
+.veg-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.veg-pill-btn {
+  letter-spacing: 0.01em;
+  font-size: 0.82rem;
+  padding: 0 16px !important;
+  height: 32px !important;
+}
+
 .menu-header {
   position: relative;
   margin-bottom: 32px;
