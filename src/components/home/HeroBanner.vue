@@ -5,7 +5,7 @@
     <div class="hero-glow hero-glow-2" />
 
     <!-- ── Platter image — static, half-visible at right edge ─────── -->
-    <div class="platter-hero d-none d-lg-block" aria-hidden="true">
+    <div class="platter-hero d-none d-md-block" aria-hidden="true">
       <img src="/images/platter-small.png" class="platter-hero-img" alt="" draggable="false" />
     </div>
 
