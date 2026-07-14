@@ -4,14 +4,21 @@
     <div class="hero-glow hero-glow-1" />
     <div class="hero-glow hero-glow-2" />
 
-    <!-- ── Platter image — static, half-visible at right edge ─────── -->
-    <div class="platter-hero d-none d-md-block" aria-hidden="true">
-      <img src="/images/platter-small.png" class="platter-hero-img" alt="" draggable="false" />
+    <!-- ── Hero Visual: circular food image ────────────────────────── -->
+    <div class="hero-visual d-none d-md-block" aria-hidden="true">
+      <div class="hero-visual-ring">
+        <img
+          src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=700&h=700&fit=crop"
+          class="hero-visual-img"
+          alt=""
+          draggable="false"
+        />
+      </div>
     </div>
 
     <!-- ── Floating Info Cards ────────────────────────────────────── -->
     <!-- Burger card — upper right -->
-    <div class="hero-float-card fc-burger glass-card d-none d-xl-flex align-center ga-3" id="float-burger">
+    <div class="hero-float-card fc-burger glass-card d-none d-md-flex align-center ga-3" id="float-burger">
       <v-avatar size="44" rounded="lg">
         <v-img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=100&h=100&fit=crop" cover />
       </v-avatar>
@@ -21,8 +28,8 @@
       </div>
     </div>
 
-    <!-- Margherita Pizza — mid-right (moved away from platter edge) -->
-    <div class="hero-float-card fc-pizza glass-card d-none d-xl-flex align-center ga-3" id="float-pizza">
+    <!-- Margherita Pizza — mid-right -->
+    <div class="hero-float-card fc-pizza glass-card d-none d-md-flex align-center ga-3" id="float-pizza">
       <v-avatar size="38" rounded="lg">
         <v-img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=100&h=100&fit=crop" cover />
       </v-avatar>
@@ -36,7 +43,7 @@
     </div>
 
     <!-- Delivery tracker — lower right -->
-    <div class="hero-float-card fc-delivery glass-card d-none d-xl-flex align-center ga-3" id="float-delivery">
+    <div class="hero-float-card fc-delivery glass-card d-none d-md-flex align-center ga-3" id="float-delivery">
       <v-icon icon="mdi-truck-fast" color="primary" size="24" />
       <div style="min-width: 110px;">
         <div class="text-body-2 font-weight-bold text-primary">On the way!</div>
@@ -201,31 +208,34 @@ const handleSearch = () => {
 .hero-glow-1 { width: 400px; height: 400px; background: #FF6B35; top: 10%; left: -10%; }
 .hero-glow-2 { width: 300px; height: 300px; background: #FF8A65; bottom: 10%; right: -5%; }
 
-/* ── Static Platter Image ────────────────────────────────────────── */
-.platter-hero {
+/* ── Hero Visual (circular food image) ──────────────────────────── */
+.hero-visual {
   position: absolute;
-  right: -120px;
+  right: -80px;
   top: 50%;
   transform: translateY(-50%);
-  width: 580px;
-  height: 580px;
-  border-radius: 50%;
-  overflow: hidden;
   pointer-events: none;
   z-index: 1;
-  box-shadow:
-    0 32px 100px rgba(255, 107, 53, 0.15),
-    0 0 0 6px rgba(255, 107, 53, 0.08),
-    0 0 0 14px rgba(255, 107, 53, 0.03);
 }
 
-.platter-hero-img {
+.hero-visual-ring {
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow:
+    0 32px 100px rgba(255, 107, 53, 0.18),
+    0 0 0 6px  rgba(255, 107, 53, 0.10),
+    0 0 0 14px rgba(255, 107, 53, 0.04);
+}
+
+.hero-visual-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
   user-select: none;
   -webkit-user-drag: none;
-  display: block;
 }
 
 /* ── Floating Cards ──────────────────────────────────────────────── */
