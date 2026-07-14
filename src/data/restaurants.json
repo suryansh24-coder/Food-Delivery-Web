@@ -842,7 +842,7 @@
     { "id": "cat-07", "name": "Noodles", "emoji": "🍜", "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=200&h=200&fit=crop", "color": "#4CAF50" },
     { "id": "cat-08", "name": "Indian", "emoji": "🍛", "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=200&h=200&fit=crop", "color": "#FF5722" },
     { "id": "cat-09", "name": "Dosa", "emoji": "🫓", "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=200&h=200&fit=crop", "color": "#8BC34A" },
-    { "id": "cat-10", "name": "Chole Bhature", "emoji": "🍛", "image": "https://images.unsplash.com/photo-1512058454905-6b841e7ad132?w=200&h=200&fit=crop", "color": "#795548" },
+    { "id": "cat-10", "name": "Chole Bhature", "emoji": "🍛", "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=200&h=200&fit=crop", "color": "#795548" },
     { "id": "cat-11", "name": "Coffee", "emoji": "☕", "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=200&h=200&fit=crop", "color": "#00BCD4" },
     { "id": "cat-12", "name": "Fast Food", "emoji": "🍟", "image": "https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=200&h=200&fit=crop", "color": "#FFC107" }
   ],
